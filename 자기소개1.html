@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>자기소개 페이지</title>
+
+<style>
+    body {
+        font-family: Arial;
+        margin: 20px;
+        background-color: #f8f8f8;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    h2 {
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+    }
+
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    hr {
+        border: 1px solid #ddd;
+    }
+
+    /* 취미 테이블 */
+    .hobby-table {
+        margin: 0 auto;
+    }
+
+    .hobby-table img {
+        width: 200px;
+        height: 130px;
+        object-fit: cover;
+    }
+
+    /* 시간표 */
+    .time-table {
+        border-collapse: collapse;
+        margin: 20px auto;
+        width: 600px;
+    }
+
+    .time-table td, .time-table th {
+        border: 1px solid #999;
+        padding: 6px;
+        text-align: center;
+        width: 80px;
+        height: 50px;
+    }
+
+    .time-table th {
+        background-color: #f0f0f0;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>About me</h2>
+<p>
+안녕하세요? 제 이름은 김건형입니다. 대학 생활을 시작한 새내기입니다.<br>
+다양한 관심분야와 취미 활동을 통해 성장하고 있습니다. 즐거운 하루 되세요 ~
+</p>
+
+<br>
+
+<h3>목차</h3>
+<ul>
+    <li><a href="#interest">관심분야</a></li>
+    <li><a href="#hobby">취미활동</a></li>
+    <li><a href="#table">강의시간표</a></li>
+</ul>
+
+<br>
+
+<!-- 관심분야 -->
+<h2 id="interest">관심 분야</h2>
+<hr>
+
+<ul>
+    <li>소프트웨어 개발
+        <ul>
+            <li>웹 개발 (HTML, CSS, JavaScript)</li>
+            <li>앱 개발 (Android, iOS)</li>
+            <li>백엔드 개발 (서버, 데이터 처리)</li>
+            <li>데이터베이스 설계 및 관리</li>
+        </ul>
+    </li>
+
+    <br>
+
+    <li>컴퓨터 네트워크
+        <ul>
+            <li>네트워크 구조 (LAN, WAN)</li>
+            <li>통신 프로토콜 (TCP/IP, HTTP)</li>
+            <li>무선 통신 (Wi-Fi, 5G)</li>
+            <li>네트워크 보안 기술</li>
+        </ul>
+    </li>
+
+    <br>
+
+    <li>사이버 보안
+        <ul>
+            <li>정보 보호 및 암호화 기술</li>
+            <li>해킹 및 보안 취약점 분석</li>
+            <li>네트워크 보안 시스템</li>
+            <li>개인정보 보호 및 관리</li>
+        </ul>
+    </li>
+</ul>
+
+<br>
+
+<!-- 취미 -->
+<h2 id="hobby">취미 활동</h2>
+<hr>
+
+<table class="hobby-table">
+    <tr>
+        <td><img src="C:\Users\gunhy\OneDrive\Desktop\학교\런닝.jpg"></td>
+        <td><img src="C:\Users\gunhy\OneDrive\Desktop\학교\게이밍.jpg"></td>
+        <td><img src="C:\Users\gunhy\OneDrive\Desktop\학교\노래.jpg"></td>
+    </tr>
+    <tr>
+        <td>running</td>
+        <td>play game</td>
+        <td>listening songs</td>
+    </tr>
+</table>
+
+<br>
+
+<!-- 시간표 -->
+<h2 id="table">강의 시간표 (2025년 1학기)</h2>
+<hr>
+
+<table class="time-table">
+    <tr>
+        <th>시간</th>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+    </tr>
+
+    <tr>
+        <td>10</td>
+        <td></td>
+        <td rowspan="3">프로그래밍 언어실습1<br>(공603호)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan="3">컴퓨터과학개론<br>(공608호)</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>14</td>
+        <td rowspan="2">SW개발문제해결능력<br>(공608호)</td>
+        <td></td>
+        <td rowspan="3">인터넷콘텐츠<br>(공603호)</td>
+        <td rowspan="2">삶과 법<br>(공205호)</td>
+    </tr>
+
+    <tr>
+        <td>15</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
