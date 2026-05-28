@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - 홍길동</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        /* 이미지의 기본 레이아웃 비율을 유지하되 디자인은 깔끔하게 개선 */
+        html, body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            font-family: 'Nanum Gothic', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        header {
+            height: 10%;
+            background: #FFFF00; /* 노란색 */
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #eee;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: #8B4513;
+            font-family: 'Nanum Pen Script', cursive;
+        }
+
+        header p {
+            margin: 3px 0;
+            font-size: 0.95em;
+            color: #444;
+        }
+
+        .main-content {
+            display: flex;
+            height: 82%; /* nav와 section의 높이 */
+        }
+
+        nav {
+            width: 20%;
+            background: #FFA500; /* 주황색 */
+            padding: 25px;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        nav h2 {
+            color: #0000FF;
+            font-size: 1.4em;
+            margin-top: 0;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
+        }
+
+        nav ul {
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #5D4037;
+        }
+
+        section {
+            width: 80%;
+            background: #ADD8E6; /* 하늘색 */
+            padding: 30px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        section h2 {
+            color: #0000FF;
+            font-size: 1.5em;
+            margin-top: 0;
+            border-bottom: 2px solid rgba(0,0,255,0.2);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            height: 8%;
+            background: #DDA0DD; /* 분홍/보라색 */
+            padding: 10px 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-top: 1px solid #ccc;
+        }
+
+        footer p {
+            margin: 2px 0;
+            font-size: 0.85em;
+            color: #333;
+        }
+
+        /* 관심분야 */
+        .interest-list { padding-left: 20px; }
+        .interest-list > li { font-weight: bold; margin-top: 15px; color: #2E7D32; font-size: 1.1em; }
+        .interest-list ul { font-weight: normal; list-style-type: circle; color: #333; margin-top: 5px; }
+
+        /* 취미활동 */
+        .hobby-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .hobby-item {
+            flex: 1;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .hobby-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .hobby-item p {
+            margin: 0;
+            padding: 8px;
+            background: #F8F9FA;
+            font-weight: bold;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+        }
+
+        /* 시간표 */
+        .timetable-title {
+            color: #0000FF;
+            font-weight: bold;
+            margin-top: 35px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 6px;
+            text-align: center;
+            height: 25px;
+            font-size: 0.85em;
+        }
+        th, td:first-child { background: #FFFACD; font-weight: bold; }
+        .highlight-pink { background: #FFC0CB; font-weight: bold; color: #C2185B; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>About me</h1>
+            <p>안녕하세요? 제 이름은 홍길동입니다. 올해 대학교를 입학한 새내기입니다.</p>
+            <p>다양한 관심분야와 취미활동을 하고 있습니다. 즐거운 하루 되세요~</p>
+        </header>
+
+        <div class="main-content">
+            <nav>
+                <h2>목차</h2>
+                <ul>
+                    <li>관심분야</li>
+                    <li>취미활동</li>
+                    <li>강의시간표</li>
+                </ul>
+            </nav>
+
+            <section>
+                <h2>관심분야</h2>
+                <ul class="interest-list">
+                    <li>클라우드 컴퓨팅(Cloud Computing)
+                        <ul>
+                            <li>가상화 기술: 물리 자원의 가상화</li>
+                            <li>서비스 모델: SaaS, PaaS, IaaS</li>
+                            <li>데이터 센터: 대규모 데이터 저장 관리 시설</li>
+                        </ul>
+                    </li>
+                    <li>블록체인(Blockchain)
+                        <ul>
+                            <li>분산 원장 기술: 거래 정보 분산 관리</li>
+                            <li>스마트 컨트랙트: 자동 실행 디지털 계약</li>
+                            <li>암호화폐: 보안 암호화 기술 디지털 자산</li>
+                        </ul>
+                    </li>
+                    <li>사이버 보안(Cyber Security)
+                        <ul>
+                            <li>네트워크 보안: 비인가 접근 보호</li>
+                            <li>암호학: 정보 보호를 위한 수학적 암호화</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>취미활동</h2>
+                <div class="hobby-container">
+                    <div class="hobby-item">
+                        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400" alt="running">
+                        <p>달리기(Running)</p>
+                    </div>
+                    <div class="hobby-item">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="gaming">
+                        <p>게임(Gaming)</p>
+                    </div>
+                    <div class="hobby-item">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400" alt="workout">
+                        <p>헬스(Workout)</p>
+                    </div>
+                </div>
+
+                <p class="timetable-title">강의시간표(2026년 1학기)</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>09:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>09:30</td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>10:00</td><td></td><td rowspan="6" class="highlight-pink">프로그래밍<br>언어 실습</td><td></td><td></td><td></td></tr>
+                        <tr><td>10:30</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>11:00</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>11:30</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>12:00</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>12:30</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>13:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>13:30</td><td></td><td></td><td></td><td rowspan="6" class="highlight-pink">컴퓨터<br>과학개론</td><td></td></tr>
+                        <tr><td>14:00</td><td rowspan="4" class="highlight-pink">SW문제<br>해결 능력</td><td></td><td rowspan="6" class="highlight-pink">인터넷<br>콘텐츠</td><td></td></tr>
+                        <tr><td>14:30</td><td></td><td></td></tr>
+                        <tr><td>15:00</td><td></td><td></td></tr>
+                        <tr><td>15:30</td><td></td><td></td></tr>
+                        <tr><td>16:00</td><td></td><td></td><td></td></tr>
+                        <tr><td>16:30</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>17:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <footer>
+            <p style="color: blue; font-weight: bold;">설문조사</p>
+            <p>Copyright 2026 by MYONGJI COLLEGE</p>
+        </footer>
+    </div>
+
+</body>
+</html>
